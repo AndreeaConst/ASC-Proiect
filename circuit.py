@@ -13,7 +13,7 @@ class Wire:
                     observer.onchange()
                 else:
                     observer()
-    def connect(self, observer):
+    def conecteaza(self, observer):
         self.observers.append(observer)
         self.drive(self.state, force=True)
 
@@ -21,13 +21,13 @@ class Wire:
 class Circuit:
     def __init__ (self, inputs, **kw):
 
-        for input_name in kw:
-            if hasattr(self,input_name):
-                input = getattr(self, input_name)
-                output = kw(input_name)
-                output.connect(input)
+        for input_nume in kw:
+            if hasattr(self,input_nume):
+                input = getattr(self, input_nume)
+                output = kw(input_nume)
+                output.conecteaza(input)
         for i in inputs:
-            i.connect(self)
+            i.conecteaza(self)
         def onchange(self):
             return  NotImplemented
 

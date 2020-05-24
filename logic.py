@@ -4,9 +4,9 @@ class NOT(Circuit):
     def __init__(self, wire = None, *a, **kw):
         self.a = Wire()
         if wire:
-            wire.connect(self.a)
+            wire.conecteaza(self.a)
         self.out = Wire()
-        self.a.connect(self)
+        self.a.conecteaza(self)
         super().__init__(inputs = [], *a, **kw)
 
     def onchange(self):
