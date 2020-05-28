@@ -2,10 +2,10 @@ class Conector:
 
     def __init__(self, owner, nume, activ = 0, vezi_output = 0):
         self.valoare_bit = None
-        self.owner = owner
+        self.owner = owner #pin sau poarta logica
         self.nume = nume
-        self.vezi_output = vezi_output
-        self.vector_conectori = []
+        self.vezi_output = vezi_output #daca vrem sa vedem valoarea outputului
+        self.vector_conectori = [] #lista de conectori de tip input
         self.activ = activ
 
     def conecteaza(self, inputs):
