@@ -52,29 +52,37 @@ def output(output0, output1, output2, output3, output4, output5, output6, output
         bit = 15
 
     if baza_finala == 10:
-        tkinter.messagebox.showinfo('REZULTAT', 'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str(bit))
+        tkinter.messagebox.showinfo('REZULTAT', 'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
+                                    + str(baza_finala) + ' este ' + str(bit))
     elif baza_finala == 16:
         if bit == 10:
             tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str('A'))
+                                        'Numarul din baza ' + str(baza_initiala) + 'convertit in baza '
+                                        + str(baza_finala) + ' este ' + str('A'))
         elif bit == 11:
             tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str('B'))
+                                        'Numarul din baza ' + str(baza_initiala) + 'convertit in baza '
+                                        + str(baza_finala) + ' este ' + str('B'))
         elif bit == 12:
             tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str('C'))
+                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
+                                        + str(baza_finala) + ' este ' + str('C'))
         elif bit == 13:
             tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str('D'))
+                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
+                                        + str(baza_finala) + ' este ' + str('D'))
         elif bit == 14:
             tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str('E'))
+                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
+                                        + str(baza_finala) + ' este ' + str('E'))
         elif bit == 15:
             tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str('F'))
+                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
+                                        + str(baza_finala) + ' este ' + str('F'))
         else:
             tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str(bit))
+                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
+                                        + str(baza_finala) + ' este ' + str(bit))
     else:
         b = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # a contine numarul convertit in baza de numeratie finala
 
@@ -91,7 +99,8 @@ def output(output0, output1, output2, output3, output4, output5, output6, output
             index -= 1
 
         tkinter.messagebox.showinfo('REZULTAT',
-                                    'Numarul convertit in baza ' + str(baza_finala) + ' este ' + str(rezultat))
+                                    'Numarul din baza ' + str(baza_initiala) + 'convertit in baza '
+                                    + str(baza_finala) + ' este ' + str(rezultat))
 
 
 def Circuit():
