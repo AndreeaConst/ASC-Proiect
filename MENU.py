@@ -4,13 +4,10 @@ from tkinter import font  as tkfont
 import PoartaAND, PoartaNOT
 from tkinter import messagebox
 
-global Numar
-global NumarLabel
 NumarLabel = 0
 Numar = 0
-global a
+ok = 1 # daca ok = 0, atunci numarul in baza 8 se scrie pe mai mult de 4 biti, deci neconvertibil
 a = [0,0,0,0]
-global baza_finala, baza_initiala
 baza_finala = 0
 baza_initiala = 0
 
@@ -18,6 +15,7 @@ def output(output0, output1, output2, output3, output4, output5, output6, output
            output10, output11, output12, output13, output14, output15):
 
     bit = 0
+
     if output0 == 1:
         bit = 0
     elif output1 == 1:
@@ -52,37 +50,62 @@ def output(output0, output1, output2, output3, output4, output5, output6, output
         bit = 15
 
     if baza_finala == 10:
-        tkinter.messagebox.showinfo('REZULTAT', 'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
-                                    + str(baza_finala) + ' este ' + str(bit))
+        if baza_initiala == 2:
+            tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                        + ' convertit in baza ' + str(baza_finala) + ' este ' + str(bit))
+        else:
+             tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                    + ' convertit in baza ' + str(baza_finala) + ' este ' + str(bit))
     elif baza_finala == 16:
         if bit == 10:
-            tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul din baza ' + str(baza_initiala) + 'convertit in baza '
-                                        + str(baza_finala) + ' este ' + str('A'))
+            if baza_initiala == 2:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('A'))
+            else:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('A'))
         elif bit == 11:
-            tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul din baza ' + str(baza_initiala) + 'convertit in baza '
-                                        + str(baza_finala) + ' este ' + str('B'))
+            if baza_initiala == 2:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('B'))
+            else:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('B'))
         elif bit == 12:
-            tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
-                                        + str(baza_finala) + ' este ' + str('C'))
+            if baza_initiala == 2:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('C'))
+            else:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('C'))
         elif bit == 13:
-            tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
-                                        + str(baza_finala) + ' este ' + str('D'))
+            if baza_initiala == 2:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('D'))
+            else:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('D'))
         elif bit == 14:
-            tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
-                                        + str(baza_finala) + ' este ' + str('E'))
+            if baza_initiala == 2:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('E'))
+            else:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('E'))
         elif bit == 15:
-            tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
-                                        + str(baza_finala) + ' este ' + str('F'))
+            if baza_initiala == 2:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('F'))
+            else:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str('F'))
         else:
-            tkinter.messagebox.showinfo('REZULTAT',
-                                        'Numarul din baza ' + str(baza_initiala) + ' convertit in baza '
-                                        + str(baza_finala) + ' este ' + str(bit))
+            if baza_initiala == 2:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str(bit))
+            else:
+                tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                            + ' convertit in baza ' + str(baza_finala) + ' este ' + str(bit))
     else:
         b = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # a contine numarul convertit in baza de numeratie finala
 
@@ -98,9 +121,12 @@ def output(output0, output1, output2, output3, output4, output5, output6, output
             rezultat = rezultat * 10 + b[index]
             index -= 1
 
-        tkinter.messagebox.showinfo('REZULTAT',
-                                    'Numarul din baza ' + str(baza_initiala) + 'convertit in baza '
-                                    + str(baza_finala) + ' este ' + str(rezultat))
+        if baza_initiala == 2:
+            tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(a) + ' din baza ' + str(baza_initiala)
+                                        + ' convertit in baza ' + str(baza_finala) + ' este ' + str(rezultat))
+        else:
+            tkinter.messagebox.showinfo('REZULTAT', 'Numarul ' + str(Numar) + ' din baza ' + str(baza_initiala)
+                                        + ' convertit in baza ' + str(baza_finala) + ' este ' + str(rezultat))
 
 
 def Circuit():
@@ -261,6 +287,7 @@ def Circuit():
 
 root = tk.Tk()
 def MESAJ():
+    global a
     a[0] = 0
     a[1] = 0
     a[2] = 0
@@ -270,18 +297,33 @@ def MESAJ():
         tkinter.messagebox.showerror('EROARE', 'Nu ati selectat o baza! Incercati din nou!')
     else:
         root1 = tk.Tk()
+        global Numar, NumarLabel
+        Numar = NumarLabel = 0
 
         def transforma_baza2():
             i = 4
-            global Numar
-            while int(Numar) != 0:
+            global a, Numar
+
+            if baza_initiala == 8:
+                if NumarLabel > 15:
+                    tkinter.messagebox.showerror('EROARE', 'Numar neconvertibil in circuitul prezent! '
+                                                           'Numarul se scrie pe mai mult de 4 biti!')
+                    return
+                if NumarLabel > 8:
+                    Numar = NumarLabel
+
+            copieNumar = Numar
+
+            while int(copieNumar) != 0:
+
                 i -= 1
-                a[i] = int(Numar % baza_finala)
-                Numar = int(Numar / baza_finala)
+                a[i] = int(copieNumar % 2)
+                copieNumar = int(copieNumar / 2)
 
             Circuit()
 
         def changeValueMinus(index, button1, button2, btn_pin):
+            global a
             a[index] = 0
             button1['state'] = 'disabled'
             button2['state'] = 'normal'
@@ -291,6 +333,7 @@ def MESAJ():
             return
 
         def changeValuePlus(index, button1, button2, btn_pin):
+            global a
             a[index] = 1
             button1['state'] = 'normal'
             button2['state'] = 'disabled'
@@ -342,26 +385,26 @@ def MESAJ():
                 if baza_initiala == 8:
                    label_baza8()
                    if Numar > 7:
-                     label_Numar.config(text="Baza 8 : " + str(NumarLabel))
-                     label_Numar.place(x=130, y=230)
+                     label_Numar.config(text="Baza initiala 8 : " + str(NumarLabel))
+                     label_Numar.place(x=115, y=230)
                    else:
-                    label_Numar.config(text="Baza 8 : " + str(Numar))
-                    label_Numar.place(x=130, y=230)
+                    label_Numar.config(text="Baza initala 8 : " + str(Numar))
+                    label_Numar.place(x=115, y=230)
 
                 elif baza_initiala == 10:
-                    label_Numar.config(text="Baza 10 : " + str(Numar))
-                    label_Numar.place(x=130, y=230)
+                    label_Numar.config(text="Baza initiala 10 : " + str(Numar))
+                    label_Numar.place(x=115, y=230)
                 elif baza_initiala == 16:
                     label_baza16()
                     if Numar > 9:
-                        label_Numar.config(text="Baza 16 : " + str(NumarLabel))
-                        label_Numar.place(x=130, y=230)
+                        label_Numar.config(text="Baza initiala 16 : " + str(NumarLabel))
+                        label_Numar.place(x=115, y=230)
                     else:
-                        label_Numar.config(text="Baza 16 : " + str(Numar))
-                        label_Numar.place(x=130, y=230)
+                        label_Numar.config(text="Baza initiala 16 : " + str(Numar))
+                        label_Numar.place(x=115, y=230)
             else:
                 button1['state'] = 'disabled'
-            # print(Numar)
+            #print(Numar)
             return
 
         def changeNumberPlus(button1, button2, btn_pin):
@@ -373,26 +416,26 @@ def MESAJ():
                 if baza_initiala == 8:
                    label_baza8()
                    if Numar > 7:
-                       label_Numar.config(text="Baza 8 : " + str(NumarLabel))
-                       label_Numar.place(x = 130, y = 230)
+                       label_Numar.config(text="Baza initiala 8 : " + str(NumarLabel))
+                       label_Numar.place(x = 115, y = 230)
                    else:
-                       label_Numar.config(text="Baza 8 : " + str(Numar))
-                       label_Numar.place(x=130, y=230)
+                       label_Numar.config(text="Baza initiala 8 : " + str(Numar))
+                       label_Numar.place(x=115, y=230)
                 elif baza_initiala == 10:
-                    label_Numar.config(text="Baza 10 : " + str(Numar))
-                    label_Numar.place(x=130, y=230)
+                    label_Numar.config(text="Baza initiala 10 : " + str(Numar))
+                    label_Numar.place(x=115, y=230)
                 elif baza_initiala == 16:
                     label_baza16()
                     if Numar > 9:
-                        label_Numar.config(text="Baza 16 : " + str(NumarLabel))
-                        label_Numar.place(x=130, y=230)
+                        label_Numar.config(text="Baza initiala 16 : " + str(NumarLabel))
+                        label_Numar.place(x=115, y=230)
                     else:
-                        label_Numar.config(text="Baza 16 : " + str(Numar))
-                        label_Numar.place(x=130, y=230)
+                        label_Numar.config(text="Baza initiala 16 : " + str(Numar))
+                        label_Numar.place(x=115, y=230)
 
             else:
                 button2['state'] = 'disabled'
-            # print(Numar)
+            #print(Numar)
             return
 
         if baza_initiala == 2:
@@ -444,7 +487,6 @@ def MESAJ():
 
         else:
             # transformare numar din baza initiala in baza 2
-            global Numar
 
             label_Numar = tk.Label(root1, text=Numar)
             label_Numar.place(x=150, y=230)
@@ -471,11 +513,15 @@ def MESAJ():
 def setValueInitial(baza):
     global baza_initiala
     baza_initiala = baza
+    label_mesaj = tk.Label(root, text="Baza initiala selectata este " + str(baza_initiala))
+    label_mesaj.place(x=50, y=320)
     #print(baza_initiala)
 
 def setValueFinal(baza):
     global baza_finala
     baza_finala = baza
+    label_mesaj = tk.Label(root, text="Baza finala selectata este " + str(baza_finala))
+    label_mesaj.place(x=260, y=320)
     #print(baza_finala)
 
 
