@@ -3,6 +3,7 @@ import tkinter
 from tkinter import font  as tkfont
 import PoartaAND, PoartaNOT
 from tkinter import messagebox
+from PIL import ImageTk,Image
 
 NumarLabel = 0
 Numar = 0
@@ -10,6 +11,14 @@ ok = 1 # daca ok = 0, atunci numarul in baza 8 se scrie pe mai mult de 4 biti, d
 a = [0,0,0,0]
 baza_finala = 0
 baza_initiala = 0
+
+
+def imagineCircuit(string):
+    nwin = tk.Toplevel()
+    photo = ImageTk.PhotoImage(Image.open(string))
+    label_nwin = tk.Label(nwin, image=photo)
+    label_nwin.pack()
+    nwin.mainloop()
 
 def output(output0, output1, output2, output3, output4, output5, output6, output7, output8, output9,
            output10, output11, output12, output13, output14, output15):
@@ -265,6 +274,7 @@ def Circuit():
     NOT2.A.set(a[2])
     NOT3.A.set(a[3])
 
+
     output0 = (AND0.E.valoare_bit)
     output1 = (AND1.E.valoare_bit)
     output2 = (AND2.E.valoare_bit)
@@ -284,6 +294,42 @@ def Circuit():
 
     output(output0, output1, output2, output3, output4, output5, output6, output7, output8,
            output9, output10, output11, output12, output13, output14, output15)
+
+    if a[0] == 0 and a[1] == 0 and a[2] == 0 and a[3] == 0:
+        imagineCircuit("./pictures/0.jpg")
+    elif a[0] == 0 and a[1] == 0 and a[2] == 0 and a[3] == 1:
+        imagineCircuit("./pictures/1.jpg")
+    elif a[0] == 0 and a[1] == 0 and a[2] == 1 and a[3] == 0:
+        imagineCircuit("./pictures/2.jpg")
+    elif a[0] == 0 and a[1] == 0 and a[2] == 1 and a[3] == 1:
+        imagineCircuit("./pictures/3.jpg")
+    elif a[0] == 0 and a[1] == 1 and a[2] == 0 and a[3] == 0:
+        imagineCircuit("./pictures/4.jpg")
+    elif a[0] == 0 and a[1] == 1 and a[2] == 0 and a[3] == 1:
+        imagineCircuit("./pictures/5.jpg")
+    elif a[0] == 0 and a[1] == 1 and a[2] == 1 and a[3] == 0:
+        imagineCircuit("./pictures/6.jpg")
+    elif a[0] == 0 and a[1] == 1 and a[2] == 1 and a[3] == 1:
+        imagineCircuit("./pictures/7.jpg")
+    elif a[0] == 1 and a[1] == 0 and a[2] == 0 and a[3] == 0:
+        imagineCircuit("./pictures/8.jpg")
+    elif a[0] == 1 and a[1] == 0 and a[2] == 0 and a[3] == 1:
+        imagineCircuit("./pictures/9.jpg")
+    elif a[0] == 1 and a[1] == 0 and a[2] == 1 and a[3] == 0:
+        imagineCircuit(".pictures/10.jpg")
+    elif a[0] == 1 and a[1] == 0 and a[2] == 1 and a[3] == 1:
+        imagineCircuit("./pictures/11.jpg")
+    elif a[0] == 1 and a[1] == 1 and a[2] == 0 and a[3] == 0:
+        imagineCircuit("./pictures/12.jpg")
+    elif a[0] == 1 and a[1] == 1 and a[2] == 0 and a[3] == 1:
+        imagineCircuit("./pictures/13.jpg")
+    elif a[0] == 1 and a[1] == 1 and a[2] == 1 and a[3] == 0:
+        imagineCircuit("./pictures/14.jpg")
+    elif a[0] == 1 and a[1] == 1 and a[3] == 1 and a[4] == 1:
+        imagineCircuit("./pictures/15.jpg")
+
+
+
 
 root = tk.Tk()
 def MESAJ():
@@ -484,6 +530,7 @@ def MESAJ():
 
             btn_convert = tk.Button(root1, text="Converteste", width=10, height=3, bg='SkyBlue1', command=Circuit)
             btn_convert.place(x=300, y=100)
+
 
         else:
             # transformare numar din baza initiala in baza 2
